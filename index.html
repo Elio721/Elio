@@ -3,64 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Your Name] | Portfolio</title>
+  <title>YONGPENG YE | Academic Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      margin: 10px 0;
+      font-size: 2.5rem;
+    }
+
+    header p, header a {
+      color: #ffe680;
+      text-decoration: none;
+    }
+
+    header a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #004080;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px){
+      header img {
+        width: 120px;
+        height: 120px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <img src="images/profile.jpg" alt="Profile Photo" class="profile-pic">
-      <h1>Hi, I'm [Your Name]</h1>
-      <p>Web Developer | Designer | Creator</p>
-    </div>
+    <img src="images/profile.jpg" alt="Profile Photo">
+    <h1>YONGPENG YE</h1>
+    <p> Mathematics · University College London</p>
+    <p>Email: <a href="mailto:yyp6714@gmail.com">yyp6714@gmail.com</a> |       
+       <a href="https://github.com/Elio721/Elio" target="_blank">https://github.com/Elio721/Elio</a></p>
   </header>
 
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <p>
-      I’m passionate about building modern, responsive websites and applications. 
-      I enjoy solving problems and creating things that people love to use.
-    </p>
-  </section>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>I am a student at University College London.I am passionate in Machine Learning and Computer Vision </p>
+    </section>
 
-  <section id="skills" class="container">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>React & Node.js</li>
-      <li>UI/UX Design</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>B.Sc. in Mathematics, University College London, 2024-2027</li>
+      </ul>
+    </section>
+    
 
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Project One</h3>
-        <p>A cool web app I built using React and Node.js.</p>
-        <a href="#">View Project</a>
-      </div>
-      <div class="project">
-        <h3>Project Two</h3>
-        <p>My portfolio design using HTML, CSS, and JavaScript.</p>
-        <a href="#">View Project</a>
-      </div>
-      <div class="project">
-        <h3>Project Three</h3>
-        <p>An open-source project I contributed to on GitHub.</p>
-        <a href="#">View Project</a>
-      </div>
-    </div>
-  </section>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Project A:</strong> Using Lean in formalising mathematical proofs  .</li>
+      </ul>
+    </section>
 
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <p>Email me at: <a href="mailto:you@example.com">you@example.com</a></p>
-    <p>Or find me on <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
-  </section>
+    <section>
+      <h2>CV</h2>
+      <p><a href="cv.pdf" target="_blank">Download my CV (PDF)</a></p>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    &copy; 2025 YONGPENG YE · Last updated: August 2025
   </footer>
 </body>
 </html>
