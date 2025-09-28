@@ -4,132 +4,145 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YONGPENG YE | Academic Portfolio</title>
-  <link rel="stylesheet" href="style.css">
   <style>
+    :root {
+      --brand: #004080;
+      --accent: #ffe680;
+      --bg: #f9f9f9;
+      --text: #333;
+      --maxw: 900px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: "Arial", sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
-
     header {
-      background-color: #004080;
+      background: var(--brand);
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 40px 20px;
     }
-
     header img {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       border: 3px solid white;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+      object-fit: cover;
     }
-
     header h1 {
-      margin: 10px 0;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
+      margin-bottom: 5px;
     }
-
-    header p, header a {
-      color: #ffe680;
+    header p {
+      margin: 5px 0;
+    }
+    header a {
+      color: var(--accent);
       text-decoration: none;
     }
-
-    header a:hover {
-      text-decoration: underline;
+    header a:hover { text-decoration: underline; }
+    nav {
+      margin-top: 10px;
     }
-
+    nav a {
+      color: var(--accent);
+      margin: 0 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav a:hover { text-decoration: underline; }
     main {
-      max-width: 900px;
+      max-width: var(--maxw);
       margin: 40px auto;
       padding: 0 20px;
     }
-
     section {
       margin-bottom: 40px;
     }
-
     h2 {
-      color: #004080;
+      color: var(--brand);
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
       margin-bottom: 15px;
+      font-size: 1.3rem;
     }
-
-    ul, ol {
-      padding-left: 20px;
-    }
-
+    ul { padding-left: 20px; }
+    li + li { margin-top: 12px; }
+    .meta { font-weight: bold; }
+    .muted { color: #555; font-size: 0.95rem; }
     footer {
       text-align: center;
-      background-color: #004080;
+      background: var(--brand);
       color: white;
-      padding: 20px;
+      padding: 18px;
       font-size: 0.9rem;
+      margin-top: 40px;
     }
-
     /* Responsive */
     @media(max-width: 600px){
-      header img {
-        width: 120px;
-        height: 120px;
-      }
-
-      header h1 {
-        font-size: 2rem;
-      }
+      header img { width: 110px; height: 110px; }
+      header h1 { font-size: 1.7rem; }
+      nav a { display: inline-block; margin: 5px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="images/profile.jpg" alt="Profile Photo">
+    <img src="images/profile.jpg" alt="Portrait of Yongpeng Ye">
     <h1>YONGPENG YE</h1>
     <p>Mathematics · University College London</p>
-    <p>Email: <a href="mailto:yyp6714@gmail.com">yyp6714@gmail.com</a> |       
-       <a href="https://github.com/Elio721/Elio" target="_blank">GitHub</a></p>
+    <p>
+      <a href="mailto:yyp6714@gmail.com">yyp6714@gmail.com</a> | 
+      <a href="https://github.com/Elio721/Elio" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </p>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#cv">CV</a>
+    </nav>
   </header>
 
   <main>
-    <section>
+    <section id="about">
       <h2>About Me</h2>
-      <p>Second-year UCL Mathematics undergraduate with strong foundations in mathematical modelling and
-      programming. Interested in machine learning and its applications to data-driven problem solving, seeking
-      internship opportunities to apply and expand technical expertise.</p>
+      <p>Second-year UCL Mathematics undergraduate with strong foundations in mathematical modelling and programming. Interested in machine learning and its applications to data-driven problem solving, seeking internship opportunities to apply and expand technical expertise.</p>
     </section>
 
-    <section>
+    <section id="education">
       <h2>Education</h2>
       <ul>
         <li>
-          <strong>University College London (UCL), London, UK</strong><br>
-          BSc Mathematics (09/2023 – expected 06/2026)<br>
-          First-year grade: <strong>2:1</strong><br>
-          Relevant modules: Linear Algebra, Probability and Statistics, Calculus<br>
-          Developed strong foundations in mathematical modelling, data analysis, and computational problem-solving.
+          <div class="meta">University College London (UCL), London, UK</div>
+          <div class="muted">BSc Mathematics · 09/2023 – expected 06/2026</div>
+          <ul>
+            <li>First-year grade: <strong>2:1</strong></li>
+            <li>Relevant modules: Linear Algebra, Probability and Statistics, Calculus</li>
+            <li>Built strong foundations in mathematical modelling, data analysis, and computational problem-solving.</li>
+          </ul>
         </li>
       </ul>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       <ul>
         <li>
-          <strong>UCL Summer Project (05/2024 – 07/2024):</strong>
-          Explored the use of the Lean proof assistant for mathematical proving and verification.
+          <div class="meta">UCL Summer Project <span class="muted">(05/2024 – 07/2024)</span></div>
           <ul>
-            <li>Applied Lean to formalize and verify analysis theorems, including the proof that every bounded monotonic sequence converges.</li>
-            <li>Gained experience with computer-assisted reasoning and the intersection of logic, mathematics, and programming.</li>
+            <li>Explored the use of the Lean proof assistant for mathematical proving and verification.</li>
+            <li>Formalized and verified analysis theorems, including the proof that every bounded monotonic sequence converges.</li>
+            <li>Gained experience with computer-assisted reasoning at the intersection of logic, mathematics, and programming.</li>
           </ul>
         </li>
         <li>
-          <strong>Kaggle Competition – Digit Recognizer:</strong> Achieved a score of <strong>0.99346</strong> on Kaggle’s Digit Recognizer competition using the MNIST dataset.
+          <div class="meta">Kaggle Competition – Digit Recognizer</div>
           <ul>
+            <li>Achieved a score of <strong>0.99346</strong> on Kaggle’s Digit Recognizer competition using the MNIST dataset.</li>
             <li>Implemented a Convolutional Neural Network (CNN) with data augmentation, batch normalization, and dropout.</li>
             <li>Applied 5-fold cross-validation and model ensembling for higher accuracy.</li>
             <li>Integrated early stopping and learning rate scheduling to optimize training efficiency and prevent overfitting.</li>
@@ -139,14 +152,19 @@
       </ul>
     </section>
 
-    <section>
+    <section id="cv">
       <h2>CV</h2>
-      <p><a href="CV-YEYONGPENG.pdf" target="_blank">Download my CV (PDF)</a></p>
+      <p><a href="CV-YEYONGPENG.pdf" target="_blank" rel="noopener noreferrer">Download my CV (PDF)</a></p>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 YONGPENG YE · Last updated: September 2025
+    &copy; <span id="year"></span> YONGPENG YE · Last updated: September 2025
   </footer>
+
+  <script>
+    // Auto-update year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
